@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hello-java"
+    }
+  },
+  "defaultProject": "hello-java",
+  "cli": {
+    "analytics": "6533bde9-b0a4-49ad-bba7-0f5caff1cc01"
+  }
 }
