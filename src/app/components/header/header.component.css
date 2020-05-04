@@ -1,0 +1,9 @@
+.mngr {
+    margin-top: 7px;
+    padding: 20px 15px;
+    padding-top: 15px;
+    border: 1px solid #ecf0f6;
+    overflow: hidden;
+    border-radius: 10px;
+    float: right;
+}
