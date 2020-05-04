@@ -1,7 +1,7 @@
 export class ResponseView {
 
-    data: any;
-    message: string;
-    success: boolean;
+    Data: any;
+    Message: string;
+    Success: boolean;
 
 }

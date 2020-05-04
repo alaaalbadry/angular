@@ -7,7 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-
+import {HttpClientModule} from '@angular/common/http';
 import { PieceOfNewsDetailsComponent } from './components/piece-of-news-details/piece-of-news-details.component';
 
 
@@ -24,7 +24,7 @@ import { PieceOfNewsDetailsComponent } from './components/piece-of-news-details/
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
