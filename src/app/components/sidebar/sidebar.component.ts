@@ -24,32 +24,24 @@ export class SidebarComponent implements OnInit {
     if(this.type===1){
       this.sidebarService.getAllRecentNews().subscribe(response=>{
       
-        let responseView:ResponseView=new ResponseView();
-        responseView=response as ResponseView;
+        // let responseView:ResponseView=new ResponseView();
+        // responseView=response as ResponseView;
         
-        if(responseView.Success)
+        if(response.Success)
         {
-          this.news=responseView.Data;
+          this.news=response.Data;
         }
        // this.isPageLoaded=true;
      },error=>{
        alert("sorry error");
      });
-    //   this.RecentNews.push("الخبر الاول");
-    //   this.RecentNews.push("الخبر الثاني ");
-    //   this.RecentNews.push("الخبر الثالث");
-    //  // this.news=this.RecentNews;
       
     }else
     {
       this.sidebarService.getAllMoreNews().subscribe(response=>{
-      
-        let responseView:ResponseView=new ResponseView();
-        responseView=response as ResponseView;
-        
-        if(responseView.Success)
+        if(response.Success)
         {
-          this.news=responseView.Data;
+          this.news=response.Data;
         }
        // this.isPageLoaded=true;
      },error=>{
