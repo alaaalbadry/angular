@@ -1,11 +1,7 @@
 <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-heading" [innerHTML]="getNewsType()"><p [innerHTML]="getNewsType()"></p> </div>
     <div class="list-group list-group-flush">
-      <a href="#" class="bg-light">الخبر الاول</a>
-      <a href="#" class="bg-light">الخبر الثاني</a>
-      <a href="#" class="bg-light">الخبر الثالث</a>
-      <a href="#" class="bg-light">الخبر الرابع</a>
-      <a href="#" class="bg-light">الخبر الخامس</a>
-      <a href="#" class="bg-light">الخبر السادس</a>
+      <a href="#" *ngFor="let item of news" class="bg-light">{{item}}</a>
+     
     </div>
   </div>
