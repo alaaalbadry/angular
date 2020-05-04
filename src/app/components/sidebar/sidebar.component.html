@@ -7,7 +7,7 @@
             Loading data ...
         </div>
     </div>
-      <a href="#" *ngFor="let item of news" class="bg-light">{{item.Title | maxLengthNews}}</a>
+      <a [routerLink]="['/details',item.ID]" *ngFor="let item of news" class="bg-light">{{item.Title | maxLengthNews}}</a>
      
     </div>
   </div>
