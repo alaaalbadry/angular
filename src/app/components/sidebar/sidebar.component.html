@@ -1,7 +1,13 @@
 <div class="bg-light border-right" id="sidebar-wrapper">
     <div class="sidebar-heading" [innerHTML]="getNewsType()"><p [innerHTML]="getNewsType()"></p> </div>
     <div class="list-group list-group-flush">
-      <a href="#" *ngFor="let item of news" class="bg-light">{{item.Title}}</a>
+      <div *ngIf="!isPageLoaded">
+        <div colspan="4">
+          <img  src="/assets/images/ajax-loader.gif">
+            Loading data ...
+        </div>
+    </div>
+      <a href="#" *ngFor="let item of news" class="bg-light">{{item.Title | maxLengthNews}}</a>
      
     </div>
   </div>

@@ -11,9 +11,8 @@ import { PieceOfNews } from 'src/app/model/piece-of-news.model';
 export class SidebarComponent implements OnInit {
 
   @Input() type=1;
-  MoreNews:string[]=[];
-  RecentNews:string[]=[];
   news:PieceOfNews[]=[];
+  isPageLoaded:boolean=false;
   constructor(private sidebarService:SidebarService) { }
 
   ngOnInit(): void {
@@ -30,8 +29,9 @@ export class SidebarComponent implements OnInit {
         if(response.Success)
         {
           this.news=response.Data;
+          this.isPageLoaded=true;
         }
-       // this.isPageLoaded=true;
+       
      },error=>{
        alert("sorry error");
      });
@@ -42,8 +42,8 @@ export class SidebarComponent implements OnInit {
         if(response.Success)
         {
           this.news=response.Data;
+          this.isPageLoaded=true;
         }
-       // this.isPageLoaded=true;
      },error=>{
        alert("sorry error");
      });

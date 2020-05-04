@@ -1,6 +1,8 @@
+import { ResponseView } from 'src/app/model/responseView.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +18,7 @@ export class ApiService {
 
   get(url:string)
   {
-    return this._httpClient.get(`${environment.apiURL}${url}`);
+    return this._httpClient.get(`${environment.apiURL}${url}`).pipe(map((response:ResponseView)=>response));
   }
 
   put(url:string,body:any)
