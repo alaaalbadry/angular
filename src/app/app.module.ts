@@ -10,6 +10,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PieceOfNewsDetailsComponent } from './components/piece-of-news-details/piece-of-news-details.component';
 import { MaxLengthNewsPipe } from './pipes/max-length-news.pipe';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -22,7 +23,9 @@ import { MaxLengthNewsPipe } from './pipes/max-length-news.pipe';
 
     PieceOfNewsDetailsComponent,
 
-    MaxLengthNewsPipe
+    MaxLengthNewsPipe,
+
+    HomeComponent
 
   ],
   imports: [
