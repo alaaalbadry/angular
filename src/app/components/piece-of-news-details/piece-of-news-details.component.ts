@@ -12,6 +12,8 @@ export class PieceOfNewsDetailsComponent implements OnInit {
 
   newDetails:ResponseViewDetails;
   id: number = 0;
+  isPageLoaded:boolean=false;
+
   constructor(private _activatedRoute: ActivatedRoute, private daoService: DaoService) { }
 
   ngOnInit(): void {
@@ -26,6 +28,7 @@ export class PieceOfNewsDetailsComponent implements OnInit {
 
       if (response.Success) {
         this.newDetails=response.Data;
+        this.isPageLoaded=true;
       }
       else {
         alert(response.Message);

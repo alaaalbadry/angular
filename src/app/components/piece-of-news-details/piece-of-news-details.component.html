@@ -1,6 +1,17 @@
 <!-- <div style="width:60%"> -->
-    <h2 class="my-news-title">{{newDetails.Title}}</h2>
-    <img class="my-img" src="{{newDetails.ImagePath}}">
+    <div >
+        <div *ngIf="!isPageLoaded" colspan="4">
+            <img  src="/assets/images/ajax-loader.gif">
+            Loading data ...
+        </div>
+        <h2 class="my-news-title">{{newDetails.Title}}</h2>
+        <div  colspan="4">
+            <img *ngIf="!isPageLoaded" src="/assets/images/ajax-loader.gif">
+            <img class="my-img" src="{{newDetails.ImagePath}}">
+        </div>
+  
     <div class="fa fa-clock-o my-time-stamp">{{newDetails.ArabicDate}}</div>
     <p style="color:#5a5a5a">{{newDetails.Desc}}</p>
+    </div>
+    
 <!-- </div> -->
