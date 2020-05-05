@@ -1,40 +1,27 @@
-<h3 class="my-h3">sccdscsddcsdc</h3>
-<hr />
+<div *ngIf="!isPageLoaded" colspan="4">
+    <img src="/assets/images/ajax-loader.gif">
+    Loading data ...
+</div>
 
-<div style="margin-top: 2rem;" class="container">
+<div *ngIf="isPageLoaded">
 
-    <div class="row">
-        <div class="col-sm">
-            <news-small-preview id="1255"></news-small-preview>
+    <h3 class="my-h3">{{newsData.Result[0].DepartmentName}}</h3>
+    <hr />
+
+    <div style="margin-top: 2rem;" class="container">
+
+        <div *ngFor="let news of newsData.Result; index as i;" class="row">
+            <div class="col-sm">
+                <news-small-preview *ngIf="i%3==0" id="{{newsData.Result[i].ID}}"></news-small-preview>
+            </div>
+            <div class="col-sm">
+                <news-small-preview *ngIf="i%3==0" id="{{newsData.Result[i + 1].ID}}"></news-small-preview>
+            </div>
+            <div class="col-sm">
+                <news-small-preview *ngIf="i%3==0" id="{{newsData.Result[i + 2].ID}}"></news-small-preview>
+            </div>
         </div>
-        <div class="col-sm">
-            <news-small-preview id="1255"></news-small-preview>
-        </div>
-        <div class="col-sm">
-            <news-small-preview id="1255"></news-small-preview>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm">
-            <news-small-preview id="1255"></news-small-preview>
-        </div>
-        <div class="col-sm">
-            <news-small-preview id="1255"></news-small-preview>
-        </div>
-        <div class="col-sm">
-            <news-small-preview id="1255"></news-small-preview>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm">
-            <news-small-preview id="1255"></news-small-preview>
-        </div>
-        <div class="col-sm">
-            <news-small-preview id="1255"></news-small-preview>
-        </div>
-        <div class="col-sm">
-            <news-small-preview id="1255"></news-small-preview>
-        </div>
+
     </div>
 
 </div>

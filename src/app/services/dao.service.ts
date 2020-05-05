@@ -6,10 +6,10 @@ import { ApiService } from './api.service';
 })
 export class DaoService {
 
-  constructor(private apiService:ApiService) { }
+  constructor(private apiService: ApiService) { }
 
-  getNewDetailsById(newId:number)
-  {
-   return this.apiService.get(`/News/GetDetails?id=`+newId);
+  getNewDetailsById(newId: number) {
+    return this.apiService.get(`/News/GetDetails?id=` + newId);
   }
+
 }
