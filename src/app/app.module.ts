@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { PieceOfNewsDetailsComponent } from './components/piece-of-news-details/piece-of-news-details.component';
 import { NewsSmallPreviewComponent } from './components/news-small-preview/news-small-preview.component';
 import { MaxLengthNewsPipe } from './pipes/max-length-news.pipe';
+import { DepartmentNewsPageComponent } from './components/department-news-page/department-news-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MaxLengthNewsPipe } from './pipes/max-length-news.pipe';
     SidebarComponent,
     NewsSmallPreviewComponent,
     PieceOfNewsDetailsComponent,
-    MaxLengthNewsPipe
+    MaxLengthNewsPipe,
+    DepartmentNewsPageComponent
 
   ],
   imports: [
