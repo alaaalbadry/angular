@@ -1,0 +1,49 @@
+.my-news-title{
+
+    position: relative;
+    display: inline-block;
+    /* font-size: 2em; */
+    font-weight: 800;
+    color: royalblue;
+    overflow: hidden;
+    background: linear-gradient(to right, midnightblue, midnightblue 50%, royalblue 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+    margin-bottom: 2rem;
+
+}
+
+.my-news-title:hover{
+
+    background-position: 0 100%;
+
+}
+
+
+.my-time-stamp{
+
+    position: relative; 
+    text-align: left;
+    top:-2.1rem;
+    left:0rem;
+    background-color: rgba(237, 20, 91, 0.7);
+    color:white;
+    padding: 0.3rem;
+    width:100%;
+
+}
+
+/* .overlay{
+
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+
+} */
