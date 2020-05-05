@@ -1,0 +1,30 @@
+.my-card{
+
+    width: 20rem;
+    height: 8rem;
+
+}
+
+.my-time-stamp{
+
+    position: relative; 
+    text-align: left;
+    top:-2.1rem;
+    left:0rem;
+    background-color: rgba(237, 20, 91, 0.7);
+    color:white;
+    padding: 0.3rem;
+    width:100%;
+
+}
+
+/* .overlay{
+
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+
+} */
