@@ -22,9 +22,6 @@ export class SidebarComponent implements OnInit {
   setNewsType():any{
     if(this.type===1){
       this.sidebarService.getAllRecentNews().subscribe(response=>{
-      
-        // let responseView:ResponseView=new ResponseView();
-        // responseView=response as ResponseView;
         
         if(response.Success)
         {
