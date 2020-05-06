@@ -1,13 +1,31 @@
 <div class="bg-light border-right" id="sidebar-wrapper">
-    <div class="sidebar-heading" [innerHTML]="getNewsType()"><p [innerHTML]="getNewsType()"></p> </div>
-    <div class="list-group list-group-flush">
-      <div *ngIf="!isPageLoaded">
-        <div colspan="4">
-          <img  src="/assets/images/ajax-loader.gif">
-            Loading data ...
-        </div>
-    </div>
-      <a [routerLink]="['/details',item.ID]" *ngFor="let item of news" class="bg-light">{{item.Title | maxLengthNews}}</a>
-     
-    </div>
+  <div class="sidebar-heading" [innerHTML]="getNewsType()">
+    <p [innerHTML]="getNewsType()"></p>
   </div>
+  <div class="list-group list-group-flush">
+    <div *ngIf="!isPageLoaded">
+      <div colspan="4">
+        <img src="/assets/images/ajax-loader.gif">
+        Loading data ...
+      </div>
+      <!-- </div>
+      <h3 [routerLink]="['/details',item.ID]" *ngFor="let item of news" class="bg-light">
+        {{item.Title | maxLengthNews}}
+      </h3>
+     
+    </div> -->
+    </div>
+    <div class="tab-container active">
+      <div *ngFor="let item of news index as i" class="article-box-sm with-number">
+        <a href="/news/details/11339">
+          <div class="image">
+            <div class="number">{{i+1}}</div>
+          </div>
+          <div class="text">
+            <a [routerLink]="['/details',item.ID]"> {{item.Title | maxLengthNews}}
+
+            </a>
+          </div>
+        </a>
+      </div>
+    </div>

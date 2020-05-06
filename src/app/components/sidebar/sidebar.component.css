@@ -1,0 +1,50 @@
+.article-box-sm .image {
+    float: right;
+    margin-left: 10px;
+    position: relative;
+}
+
+.article-box-sm.with-number .image {
+    width: 50px;
+    text-align: right;
+}
+
+.article-box-sm.with-number .image .number {
+    width: 40px;
+    height: 40px;
+    margin-top: 22px;
+    line-height: 35px;
+    display: inline-block;
+    color: #fff;
+    background: #2ea2fd;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.article-box-sm {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.article-box-sm .text {
+    float: right;
+    width: calc(100% - 110px);
+}
+.article-box-sm.with-number .text {
+    width: calc(100% - 60px);
+}
+
+.tab-container.active {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+    overflow: inherit;
+}
+
+.tab-container {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
