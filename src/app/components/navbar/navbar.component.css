@@ -5,6 +5,13 @@
 }
 a{
 
-    color: white !important;
+    color: white;
+
+}
+
+.active{
+
+    color: #cdd3e0;
+    /* background-color: #0F2354; */
 
 }
