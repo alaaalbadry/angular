@@ -9,17 +9,17 @@ import { ResponseViewDeptHomeNews } from 'src/app/model/responseViewDeptHomeNews
 })
 export class HomeComponent implements OnInit {
 
-  newsOfDepartments:ResponseViewDeptHomeNews[];
+  newsOfDepartments:ResponseViewDeptHomeNews[]=[];
   isPageLoaded:boolean=false;
-  constructor(private homeService:HomeService) { alert("consructor");}
+  constructor(private homeService:HomeService) { }
 
   ngOnInit(): void {
-    alert("ngOnInit");
+   
     this.homeService.getHomeDepartments().subscribe(response=>{
-      alert("subscribe");
+     
       if(response.Success)
       {
-        this.newsOfDepartments=response.Data;
+        this.newsOfDepartments = response.Data;
         this.isPageLoaded=true;
       }
      

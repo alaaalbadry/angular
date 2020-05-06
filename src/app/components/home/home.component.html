@@ -1,1 +1,33 @@
-<p>home works!</p>
+<div *ngIf="!isPageLoaded" colspan="4">
+    <img src="/assets/images/ajax-loader.gif">
+    Loading data ...
+</div>
+
+<div *ngIf="isPageLoaded">
+
+
+    <div style="margin-top: 2rem;" class="container">
+        <div *ngFor="let news of newsOfDepartments; index as i;"  class="content-box">
+              
+                    <div class="section-title">
+                        <h3 >{{news.Name}}</h3>
+                    </div>
+    
+                <div class="row">
+                    <div class="col-sm">
+                        <news-small-preview id="{{news.Items[i].ID}}"></news-small-preview>
+                    </div>
+                    <div class="col-sm">
+                        <news-small-preview id="{{news.Items[i + 1].ID}}"></news-small-preview>
+                    </div>
+                    <div class="col-sm">
+                        <news-small-preview id="{{news.Items[i + 2].ID}}"></news-small-preview>
+                    </div>
+                </div>
+
+        </div>
+       
+
+    </div>
+
+</div>

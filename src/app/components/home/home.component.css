@@ -1,0 +1,41 @@
+.my-h3{
+
+    width:fit-content;
+    border-bottom: 0.2rem #2ea2fd solid;
+    margin-bottom: -1rem;
+    padding-bottom: 0.7rem;
+    float: right;
+}
+
+.content-box .section-title h3 {
+    font-size: 22px;
+    color: #000;
+    float: right;
+}
+.content-box .section-title:after {
+    content: '';
+    position: absolute;
+    height: 0.25em;
+    background: #2ea2fd;
+    right: 0;
+    bottom: -0.12em;
+    width: 40px;
+  }
+  .content-box .section-title {
+    border-bottom: 1px solid #e2e7f0;
+    position: relative;
+    padding-bottom: 17px;
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+
+  .content-box {
+    padding: 20px;
+    padding-top: 15px;
+    border: 1px solid #e2e7f0;
+    margin-bottom: 30px;
+  }
+  .content-box .bnr {
+    margin-bottom: 40px;
+    margin-top: 25px;
+  }
